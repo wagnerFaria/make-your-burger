@@ -114,6 +114,37 @@
       ],
       "status": "Solicitado",
       "id": 5
+    },
+    {
+      "nome": "José Benedito Correa do Amaral",
+      "carne": "Alcatra",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Salame",
+        "Cebola roxa",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 6
+    },
+    {
+      "nome": "",
+      "carne": "",
+      "pao": "",
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 7
+    },
+    {
+      "nome": "estagiario",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Salame",
+        "Cebola roxa"
+      ],
+      "status": "Solicitado",
+      "id": 8
     }
   ]
 }
