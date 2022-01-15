@@ -2,7 +2,7 @@
   <div>
     <p>Componente de mensagem</p>
     <div>
-      <form action="" id="burger-form">
+      <form action="" id="burger-form" @submit.prevent="createBurger">
         <div class="input-container">
           <label for="nome">Nome do cliente</label>
           <input
@@ -43,7 +43,7 @@
             <input
               type="checkbox"
               name="opicionais"
-              v-model="opicionais"
+              v-model="opcionais"
               :value="opcional.tipo"
             />
             <span>{{ opcional.tipo }}</span>
@@ -68,7 +68,6 @@ export default {
       pao: null,
       carne: null,
       opcionais: [],
-      status: "Solicitado",
       msg: null,
     };
   },
@@ -80,6 +79,35 @@ export default {
       this.paes = data.paes;
       this.carnes = data.carnes;
       this.opcionaisdata = data.opcionais;
+    },
+    async createBurger() {
+      const data = {
+        nome: this.nome,
+        carne: this.carne,
+        pao: this.pao,
+        opcionais: Array.from(this.opcionais),
+        status: "Solicitado",
+      };
+      const dataJson = JSON.stringify(data);
+      const req = await fetch("http://localhost:3000/burgers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: dataJson,
+      });
+
+      const res = await req.json();
+
+      console.log(res);
+
+      // colocar uma msg de sistema
+
+      // limpar msg
+
+      // limpar os campos
+      this.nome = "";
+      this.carne = "";
+      this.pao = "";
+      this.opcionais = [];
     },
   },
   mounted() {
