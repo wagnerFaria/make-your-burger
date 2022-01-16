@@ -91,17 +91,6 @@
       "id": 1
     },
     {
-      "nome": "João Coelho",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
       "nome": "Wagner Faria do Amaral",
       "carne": "Picanha",
       "pao": "3 Queijos",
@@ -126,14 +115,6 @@
       ],
       "status": "Solicitado",
       "id": 6
-    },
-    {
-      "nome": "",
-      "carne": "",
-      "pao": "",
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 7
     },
     {
       "nome": "estagiario",
